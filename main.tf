@@ -17,6 +17,11 @@ terraform {
   }
 }
 
+provider "google" {
+  project = var.google_project
+  region  = var.google_region
+}
+
 resource "google_project_service" "artifactregistry" {
   service = "artifactregistry.googleapis.com"
 

@@ -3,3 +3,13 @@ variable "basename" {
   description = "構築するリソースの共通prefix"
   default     = "crtest"
 }
+
+variable "google_project" {
+  type        = string
+  description = "Google Cloud Project ID"
+}
+
+variable "google_region" {
+  type        = string
+  description = "Google Cloud Region"
+}
