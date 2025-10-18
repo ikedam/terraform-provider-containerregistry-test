@@ -1,0 +1,26 @@
+services:
+  terraform:
+    profiles: [dummy]
+    network_mode: bridge
+    image: ghcr.io/opentofu/opentofu:1.10.6
+    environment:
+      - TF_LOG
+      - TF_CLI_ARGS
+    volumes:
+      - .:/workspace
+      - ${CLOUDSDK_CONFIG:-${APPDATA:-${HOME:-}/.config}/gcloud}:/root/.config/gcloud
+      # Docker out of docker
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /workspace
+  tflint:
+    profiles: [dummy]
+    network_mode: bridge
+    image: ghcr.io/terraform-linters/tflint:v0.59.1
+    environment:
+      # --recursive で使用する場合、各モジュールのlintで使用する設定ファイルが各モジュールにある想定になってしまう。
+      # 強制的にリポジトリールートのファイルを参照させる。
+      - TFLINT_CONFIG_FILE=/workspace/.tflint.hcl
+      - TFLINT_LOG
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
