@@ -6,6 +6,7 @@ services:
     environment:
       - TF_LOG
       - TF_CLI_ARGS
+      - DOCKER_BUILDKIT=0
     volumes:
       - .:/workspace
       - ${CLOUDSDK_CONFIG:-${APPDATA:-${HOME:-}/.config}/gcloud}:/root/.config/gcloud

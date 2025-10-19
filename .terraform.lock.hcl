@@ -5,6 +5,7 @@ provider "registry.opentofu.org/hashicorp/archive" {
   version     = "2.7.1"
   constraints = "~> 2.7.1"
   hashes = [
+    "h1:e12gTxhM2qRQHWk+5jNZfBnnFqpzDOZTCL2vnvykMAo=",
     "h1:sQrOJIawX8VeHjXi9yOj8yTG6MWmDueNiOEwtug+plw=",
     "zh:4f8fe5f92125fc7be91379dbde004aaf676fbb523082af167d0a57ac723836bc",
     "zh:4fba9a08c254fd3c17464c1e13398e4927b1d3e22bfdc3bb66c4e5bd9573ada4",
@@ -24,6 +25,7 @@ provider "registry.opentofu.org/hashicorp/google" {
   constraints = "~> 7.7.0"
   hashes = [
     "h1:GvFNQvGCk4iSTm9GFHpWDlx5MEc2UZlrJ75fscpPXGA=",
+    "h1:ZG718rccoJ8+FDTFUQTUdo9yDu/XmdW0MLLdua8GTc4=",
     "zh:1173cac9f49eb248708e6a8ffc16d7840123b373f9d802e47bae8b0fe0097a1b",
     "zh:271d561d9266e3da93d3427dec1483c921c664ac767a5370afb608587969ab2f",
     "zh:536e23069e839f430a6c2123df1c00387e4de69dc943ba389f202e2b937b4d3d",
@@ -37,10 +39,12 @@ provider "registry.opentofu.org/hashicorp/google" {
 }
 
 provider "tf-containerregistry.ikedam.jp/ikedam/containerregistry" {
-  version     = "0.2.5"
-  constraints = "~> 0.2.5"
+  version     = "0.4.0"
+  constraints = "~> 0.4.0"
   hashes = [
-    "h1:AAHaAi83PkcrZb0WGu3O35Kpbi1HGLiDowrGCDJl+Uk=",
-    "zh:c76d8990731777cc262e3a25326f5a85e75f915e37ba8f199c8b1201794c8ec8",
+    "h1:Uy7Ykj3AtkwikYLPgEHxCr9ErSsav/F45ZUItpabZP0=",
+    "h1:dV+zNA9X0hEg5fd7zMreyyQi4SDmE2gVzpvqB0N5FbY=",
+    "zh:bfe82b8c2bc3647c57545de38d50a196be66147bc0f3b2e0b35e10d6a584c402",
+    "zh:f1e95a7d61234f4adee2b8392e8a3425c19106f3b30c16f28f724784ffc07904",
   ]
 }

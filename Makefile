@@ -21,7 +21,7 @@ format:	## format terraform files
 
 .PHONY: lock
 lock:	## create/update .terraform.lock.hcl file
-	docker compose run --rm terraform providers lock -platform=linux_amd64 -platform=linux_arm64 -enable-plugin-cache
+	docker compose run --rm terraform providers lock -platform=linux_amd64 -platform=linux_arm64
 
 .PHONY: plan
 plan:	## run terraform plan
